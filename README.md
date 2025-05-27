@@ -1,4 +1,4 @@
-# GLFNet
+# GLFNet: A Global–Local Feature Fusion Network for Driver Distraction Recognition
 # 🚗 Project Driver Distraction Recognition Project
 
 **正在整理**
