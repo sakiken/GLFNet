@@ -2,6 +2,18 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+#多头注意力
+class AttentionFusion(nn.Module):
+    def __init__(self, feature_dim=512):
+        super(AttentionFusion, self).__init__()
+        self.attention = nn.MultiheadAttention(embed_dim=feature_dim, num_heads=8)
+
+    def forward(self, x1, x2):
+        x = torch.stack([x1, x2], dim=0)  # (2, batch_size, 512)
+        attn_output, _ = self.attention(x, x, x)
+        output = attn_output.mean(dim=0)
+        return output
+
 class LGMA(nn.Module):
     def __init__(self, in_channels):
         super(LGMA, self).__init__()
