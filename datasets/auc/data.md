@@ -6,6 +6,7 @@ This repository contains the dataset and feature files for the AUC driver distra
 
 ## 📂 Directory Structure
 
+```
 auc/
 ├── imgs/
 │ ├── tests/ # Test images organized by class
@@ -16,7 +17,7 @@ auc/
 │ └── features/ # Extracted keypoint features for train set
 ├── Test_data_list.csv # CSV file listing test data details
 └── Train_data_list.csv # CSV file listing train data details
-
+```
 
 ---
 
