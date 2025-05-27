@@ -72,9 +72,6 @@ class CrossAttentionFusion(nn.Module):
 
         return fused
 
-
-
-
 # 测试代码
 if __name__ == "__main__":
     import torch
