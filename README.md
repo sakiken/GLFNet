@@ -1,5 +1,5 @@
 # GLFNet
-# 🚗 Project
+# 🚗 Project Driver Distraction Recognition Project
 
 **正在整理**
 
@@ -31,6 +31,29 @@ https://www.kaggle.com/datasets/tejakalepalle/auc-distracted-driver-dataset-v1
 
 unzip answer Ref：  https://heshameraqi.github.io/distraction_detection
 
+---
+
+## ⚙️ Environment Setup
+
+| Environment & Hyperparameter      | Details                   |
+|-----------------------------------|---------------------------|
+| Platform                          | NVIDIA A30 GPU (24 GB)    |
+| Operating System                  | Ubuntu 20.04              |
+| Framework                         | PyTorch 2.0.0             |
+| Optimizer                         | SGD                      |
+| Momentum                          | 0.9                      |
+| Weight Decay                      | 0.00001                  |
+| Max Epochs                        | 150                      |
+| Batch Size                        | 32                       |
+| Initial Learning Rate (LR)        | 0.001                   |
+| Patience (Early Stop)             | 4                        |
+| LR Decay                          | 0.1                      |
+| Minimum LR                        | 0.000001                 |
+| Loss Function                     | Cross-entropy Loss        |
+
+---
+
+
 ## 🏗️ Models
 
 This folder contains:
@@ -59,3 +82,10 @@ This folder contains:
 - `loder.py` → Auxiliary data handling helpers.
 - `test_fuc.py` → Test phase helper functions.
 - `util.py` → General-purpose utilities.
+
+## 📢 Summary
+
+This repository is designed for research on distracted driving recognition using deep learning.  
+It provides a complete pipeline from datasets and feature extraction to model training, evaluation, and comparisons.  
+
+Feel free to explore, use, or extend the code — and reach out for collaboration or questions!
