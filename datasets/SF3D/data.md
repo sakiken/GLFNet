@@ -15,7 +15,7 @@ SF3D/
 ├── tests/
 │ └── features/ # Extracted keypoint features for test images
 ├── driver_imgs_list.csv # CSV file listing training image details
-├── sample_submission.csv # Example submission format for evaluation
+└── sample_submission.csv # Example submission format for evaluation
 
 
 ---
