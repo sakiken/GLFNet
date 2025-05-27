@@ -5,7 +5,7 @@ This repository contains the dataset and extracted features for the **State Farm
 ---
 
 ## 📂 Directory Structure
-
+```
 SF3D/
 ├── imgs/
 │ ├── trains/ # Training images by class
@@ -16,7 +16,7 @@ SF3D/
 │ └── features/ # Extracted keypoint features for test images
 ├── driver_imgs_list.csv # CSV file listing training image details
 └── sample_submission.csv # Example submission format for evaluation
-
+```
 
 ---
 
