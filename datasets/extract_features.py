@@ -1,3 +1,50 @@
+"""
+脚本名称：extract_keypoints_rtmpose.py
+
+脚本作用：
+本脚本基于 mmpose 框架，使用 RTMPose 模型对给定图像数据集中每张图片的人体关键点进行检测，并将提取到的关键点信息（包括关键点坐标和对应置信度分数）保存为 .npy 文件，供后续特征分析、行为识别或机器学习任务使用。
+
+主要功能：
+✅ 初始化 RTMPose 全身关键点检测模型；
+✅ 遍历指定图像数据集（按照类别组织的文件夹结构）；
+✅ 对每张图像进行人体关键点检测；
+✅ 提取关键点坐标（shape: [人数, 133, 2]）和关键点置信度（shape: [人数, 133]）；
+✅ 将关键点坐标和置信度拼接为 shape: [人数, 133, 3]，并以 .npy 文件格式保存到输出目录。
+
+输入：
+- 图像数据集目录（image_dir），按照类别分文件夹组织，如：
+    datasets/auc/imgs/trains/c0/*.jpg
+    datasets/auc/imgs/trains/c1/*.jpg
+    ...
+- RTMPose 配置文件和权重文件，用于加载关键点检测模型。
+
+输出：
+- 保存关键点信息的 .npy 文件，存放在 output_root_dir 下，结构为：
+    datasets/auc/trains/features/c0/xxx_features.npy
+    datasets/auc/trains/features/c1/xxx_features.npy
+    ...
+
+依赖：
+- mmpose
+- OpenCV (cv2)
+- numpy
+- tqdm
+
+使用说明：
+运行前请确保：
+1️⃣ 已安装 mmpose 及其依赖库；
+2️⃣ 提供的 config_file 和 checkpoint_file 路径正确；
+3️⃣ 输入图像目录和输出目录存在或可创建。
+
+
+
+作者：
+sakiken
+
+最后更新日期：
+2025-05-27
+"""
+
 import os
 import cv2
 import numpy as np
